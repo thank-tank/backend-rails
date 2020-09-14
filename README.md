@@ -3,7 +3,7 @@
 This application is the migration from Django to Ruby on Rails
 
 ## License
-All source code is available under the MIT License. See [LICENSE.md](License.md) for details.
+All source code is available under the MIT License. See [LICENSE.md](LICENSE.md) for details.
 
 ## Getting Started
 To deploy locally, clone the repo and install the gem dependencies:
