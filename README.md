@@ -1,24 +1,27 @@
-# README
+# ThankTank Backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application is the migration from Django to Ruby on Rails
 
-Things you may want to cover:
+## License
+All source code is available under the MIT License. See [LICENSE.md](License.md) for details.
 
-* Ruby version
+## Getting Started
+To deploy locally, clone the repo and install the gem dependencies:
+```
+$ bundle install --without production
+```
+Migrate the database
+```
+$ rails db:migrate
+```
+Run tests
+```
+$ rails test
+```
+Run the app in a local server:
+```
+$ rails server
+```
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Production Details
+The Ruby on Rails application is running on a Heroku dyno at [thanktank.app](thanktank.app).
