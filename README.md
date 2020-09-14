@@ -24,4 +24,4 @@ $ rails server
 ```
 
 ## Production Details
-The Ruby on Rails application is running on a Heroku dyno at [thanktank.app](thanktank.app).
+The Ruby on Rails application is running on a Heroku dyno at [thanktank.app](https://thanktank.app).
