@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'app/home'
+  get 'app/profile'
+  get 'app/about'
+  get 'app/contact'
   root                      :to => "app#home"
   get       '/home',        :to => "app#home"
   get       '/about',       :to => "app#about"
