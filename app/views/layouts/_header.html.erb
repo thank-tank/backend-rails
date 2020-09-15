@@ -1,0 +1,14 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to image_tag("water.png", alt: "ThankTank Logo", height: 40, width: 40), root_path, id: "logo-icon" %>
+    <%= link_to "ThankTank", root_path, id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Log In", login_path %></li>
+        <li><%= link_to "Sign Up", signup_path %></li>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Profile", profile_path %></li>
+      </ul>
+    </nav>
+  </div>
+</header>
