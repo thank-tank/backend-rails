@@ -4,7 +4,7 @@
     <title><%= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <!--[if lt IE 9]>
@@ -13,6 +13,22 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to image_tag("water.png", alt: "ThankTank Logo", height: 40, width: 40), root_path, id: "logo-icon" %>
+        <%= link_to "ThankTank", root_path, id: "logo" %>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Log In", login_path %></li>
+            <li><%= link_to "Sign Up", login_path %></li>
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Profile", profile_path %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
