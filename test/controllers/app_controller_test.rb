@@ -5,6 +5,12 @@ class AppControllerTest < ActionDispatch::IntegrationTest
     @base_title = "ThankTank |"
   end
 
+  test "should get root" do
+    get root_path
+    assert_response :success
+    assert_select "title", "#{@base_title} Home"
+  end
+
   test "should get home" do
     get home_path
     assert_response :success
