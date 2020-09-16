@@ -52,6 +52,17 @@ p {
 		font-size: 1.4em;
 		text-align: center;
 	}
+	&.about {
+		font-weight: 300;
+		font-size: 1.4em;
+	}
+	&.quote {
+		font-weight: 300;
+		font-size: 1.6em;
+		text-align: center;
+		padding-left: 50px;
+		padding-right: 50px;
+	}
 }
 
 #logo {
@@ -100,5 +111,3 @@ footer {
 		float: right;
 	}
 }
-
-
