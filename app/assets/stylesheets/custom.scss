@@ -110,4 +110,14 @@ footer {
 	#site-meta {
 		float: right;
 	}
+
+	.social {
+		font-size: 25px;
+		color: black;
+		padding-right: 5px;
+	}
+
+	.social:hover {
+		color: gray;
+	}
 }
