@@ -12,7 +12,7 @@ class AppControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get home" do
-    get home_path
+    get root_path
     assert_response :success
     assert_select "title", "ThankTank"
   end
@@ -29,9 +29,10 @@ class AppControllerTest < ActionDispatch::IntegrationTest
     assert_select "title", "#{@base_title} Contact"
   end
 
-  test "should get profile" do
-    get profile_path
-    assert_response :success
-    assert_select "title", "#{@base_title} Profile"
-  end
+#  test "should get profile" do
+#    get profile_path
+#    assert_response :success
+#    assert_select "title", "#{@base_title} Profile"
+#  end
 end
+

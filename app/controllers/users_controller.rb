@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   def show
-    @user = User.find(params[:id])
+    if (params[:id].nil?)
+      @user = User.find_by(name:"Ben")
+    else
+      @user = User.find(params[:id])
+    end
   end
 
   def new
