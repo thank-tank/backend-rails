@@ -11,4 +11,5 @@ class User < ApplicationRecord
             format: { with: EMAIL_PATTERN },
             uniqueness: true,
            )
+  has_secure_password
 end
