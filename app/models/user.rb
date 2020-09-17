@@ -11,5 +11,9 @@ class User < ApplicationRecord
             format: { with: EMAIL_PATTERN },
             uniqueness: true,
            )
+  validates(:password,
+            presence: true,
+            length: { minimum: 6 },
+           )
   has_secure_password
 end
