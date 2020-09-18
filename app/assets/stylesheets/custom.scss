@@ -106,20 +106,36 @@ footer {
 	#author-meta {
 		float: left;
 	}
-
 	#site-meta {
 		float: right;
 	}
-
 	.social {
 		font-size: 25px;
 		color: black;
 		padding-right: 5px;
 	}
-
 	.social:hover {
 		color: gray;
 	}
+}
+
+@media (max-width: 800px) {
+	footer {
+		.site-meta {
+			display: block;
+			float: none;
+			margin-bottom: 1em;
+		}
+		ul {
+			float: left;
+			padding: 0;
+			li {
+				float: none;
+				margin-left: 0;
+			}
+		}
+	}
+
 }
 
 /* mixins, variables, etc */

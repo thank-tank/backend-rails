@@ -2,7 +2,18 @@
   <div class="container">
     <%= link_to image_tag("water.png", alt: "ThankTank Logo", height: 40, width: 40), root_path, id: "logo-icon" %>
     <nav>
-      <ul class="nav navbar-nav navbar-right">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed"
+                data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1"
+                aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <ul class="nav navbar-nav navbar-right collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <% if logged_in? %>
           <li><%= link_to "Home", root_path %></li>
           <li class="dropdown">
