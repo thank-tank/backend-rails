@@ -78,17 +78,19 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
-    childprocess (3.0.0)
+    childprocess (1.0.0)
     coderay (1.1.3)
     concurrent-ruby (1.1.7)
     crass (1.0.6)
     erubi (1.9.0)
     execjs (2.7.0)
+    faraday (1.0.1)
+      multipart-post (>= 1.2, < 3)
     ffi (1.13.1)
     formatador (0.2.5)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    guard (2.16.2)
+    guard (2.15.0)
       formatador (>= 0.2.4)
       listen (>= 2.7, < 4.0)
       lumberjack (>= 1.0.12, < 2.0)
@@ -120,13 +122,14 @@ GEM
     mimemagic (0.3.5)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
-    minitest (5.14.2)
-    minitest-reporters (1.4.2)
+    minitest (5.11.3)
+    minitest-reporters (1.3.8)
       ansi
       builder
       minitest (>= 5.0)
       ruby-progressbar
     msgpack (1.3.3)
+    multipart-post (2.1.1)
     nenv (0.3.0)
     nio4r (2.5.3)
     nokogiri (1.10.10)
@@ -134,7 +137,18 @@ GEM
     notiffany (0.1.3)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    octokit (4.18.0)
+      faraday (>= 0.9)
+      sawyer (~> 0.8.0, >= 0.5.3)
+    parslet (1.8.2)
     pg (1.2.3)
+    popper (0.5.1)
+      bundler
+      mail
+      octokit
+      slack-notifier
+      thor
+      toml
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -161,10 +175,10 @@ GEM
       bundler (>= 1.3.0)
       railties (= 6.0.3.3)
       sprockets-rails (>= 2.0.0)
-    rails-controller-testing (1.0.5)
-      actionpack (>= 5.0.1.rc1)
-      actionview (>= 5.0.1.rc1)
-      activesupport (>= 5.0.1.rc1)
+    rails-controller-testing (1.0.4)
+      actionpack (>= 5.0.1.x)
+      actionview (>= 5.0.1.x)
+      activesupport (>= 5.0.1.x)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
@@ -182,9 +196,7 @@ GEM
       ffi (~> 1.0)
     regexp_parser (1.7.1)
     ruby-progressbar (1.10.1)
-    rubyzip (2.3.0)
-    sass-rails (6.0.0)
-      sassc-rails (~> 2.1, >= 2.1.1)
+    rubyzip (1.3.0)
     sassc (2.4.0)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
@@ -193,10 +205,14 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    selenium-webdriver (3.142.7)
-      childprocess (>= 0.5, < 4.0)
-      rubyzip (>= 1.2.2)
+    sawyer (0.8.2)
+      addressable (>= 2.3.5)
+      faraday (> 0.8, < 2.0)
+    selenium-webdriver (3.142.4)
+      childprocess (>= 0.5, < 3.0)
+      rubyzip (~> 1.2, >= 1.2.2)
     shellany (0.0.1)
+    slack-notifier (2.3.2)
     spring (2.1.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -212,6 +228,8 @@ GEM
     thor (1.0.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
+    toml (0.2.0)
+      parslet (~> 1.8.0)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -222,9 +240,9 @@ GEM
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
       railties (>= 6.0.0)
-    webdrivers (4.4.1)
+    webdrivers (4.1.2)
       nokogiri (~> 1.6)
-      rubyzip (>= 1.3.0)
+      rubyzip (~> 1.0)
       selenium-webdriver (>= 3.0, < 4.0)
     webpacker (4.3.0)
       activesupport (>= 4.2)
@@ -246,24 +264,25 @@ DEPENDENCIES
   bootstrap-sass (= 3.4.1)
   byebug
   capybara (>= 2.15)
-  guard
-  guard-minitest
+  guard (= 2.15.0)
+  guard-minitest (= 2.4.6)
   jbuilder (~> 2.7)
   listen (~> 3.2)
-  minitest
-  minitest-reporters
-  pg
+  minitest (= 5.11.3)
+  minitest-reporters (= 1.3.8)
+  pg (= 1.2.3)
+  popper
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.2)
-  rails-controller-testing
-  sass-rails (>= 6)
-  selenium-webdriver
+  rails-controller-testing (= 1.0.4)
+  sassc-rails (>= 2.1.0)
+  selenium-webdriver (= 3.142.4)
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3 (~> 1.4)
   turbolinks (~> 5)
   web-console (>= 3.3.0)
-  webdrivers
+  webdrivers (= 4.1.2)
   webpacker (~> 4.0)
 
 RUBY VERSION

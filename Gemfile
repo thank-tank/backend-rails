@@ -5,13 +5,13 @@ ruby '2.7.0'
 gem 'rails',                    '~> 6.0.3', '>= 6.0.3.2'
 gem 'bootstrap-sass',           '3.4.1'
 gem 'puma',                     '~> 4.1'
-gem 'sass-rails',               '>= 6'
+gem 'sassc-rails',               '>= 2.1.0'
 gem 'webpacker',                '~> 4.0'
 gem 'turbolinks',               '~> 5'
 gem 'jbuilder',                 '~> 2.7'
 gem 'bcrypt',                   '3.1.13'
 gem 'bootsnap',                 '>= 1.4.2', require: false
-gem 'pg'
+gem 'popper'
 
 group :development, :test do
   gem 'sqlite3',                  '~> 1.4'
@@ -27,11 +27,15 @@ end
 
 group :test do
   gem 'capybara',               '>= 2.15'
-  gem 'selenium-webdriver'
-  gem 'webdrivers'
-  gem 'minitest'
-  gem 'minitest-reporters'
-  gem 'guard'
-  gem 'guard-minitest'
-  gem 'rails-controller-testing'
+  gem 'selenium-webdriver',     '3.142.4'
+  gem 'webdrivers',             '4.1.2'
+  gem 'minitest',                   '5.11.3'
+  gem 'minitest-reporters',         '1.3.8'
+  gem 'guard',                      '2.15.0'
+  gem 'guard-minitest',             '2.4.6'
+  gem 'rails-controller-testing',   '1.0.4'
+end
+
+group :production do
+  gem 'pg',                     '1.2.3'
 end
