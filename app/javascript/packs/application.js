@@ -6,7 +6,7 @@
 require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
-require("popper")
+require("popperjs")
 require("bootstrap-sprockets")
 require("turbolinks").start()
 import "bootstrap"
