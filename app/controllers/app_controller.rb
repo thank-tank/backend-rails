@@ -10,4 +10,7 @@ class AppController < ApplicationController
 
   def contact
   end
+
+  def construction
+  end
 end
