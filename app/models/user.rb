@@ -32,8 +32,23 @@ class User < ApplicationRecord
 	end
   end
 
+  # remembers a user of session persistence
   def remember
     self.remember_token = User.new_token
     update_attribute(:remember_digest, User.digest(remember_token))
+  end
+
+  # removes user from session persistence
+  def forget
+	update_attribute(:remember_digest, nil)
+  end
+
+  # checks auth state, returns boolean
+  def authenticated?(remember_token)
+	if remember_digest.nil?
+		false
+	else
+		BCrypt::Password.new(remember_digest).is_password?(remember_token)
+	end
   end
 end
