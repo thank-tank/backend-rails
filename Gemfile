@@ -11,6 +11,7 @@ gem 'jbuilder',                 '2.10.0'
 gem 'bootsnap',                 '1.4.6', require: false
 gem 'bootstrap-sass',           '3.4.1'
 gem 'bcrypt',                   '3.1.13'
+gem 'faker',                    '2.1.2'
 
 group :development, :test do
   gem 'sqlite3',                  '~> 1.4'
