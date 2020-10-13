@@ -1,0 +1,7 @@
+<% if @feed_items.any? %>
+	<ol class="posts">
+		<%= render @feed_items %>
+	</ol>
+	<%= will_paginate @feed_items,
+		params: { controller: :app, action: :home } %>
+<% end %>

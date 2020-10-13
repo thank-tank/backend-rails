@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   attr_accessor :remember_token
+  has_many :posts, dependent: :destroy
   before_save { self.email = email.downcase }
   EMAIL_PATTERN = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
   validates(:name,
@@ -42,6 +43,10 @@ class User < ApplicationRecord
   # removes user from session persistence
   def forget
 	update_attribute(:remember_digest, nil)
+  end
+
+  def feed
+    Post.where("user_id = ?", id)
   end
 
   # checks auth state, returns boolean

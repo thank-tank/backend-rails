@@ -8,11 +8,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    if (params[:id].nil?)
-      @user = User.find_by(name:"Ben")
-    else
-      @user = User.find(params[:id])
-    end
+    @user = User.find(params[:id])
+    @posts = @user.posts.paginate(page: params[:page])
   end
 
   def new
