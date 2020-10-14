@@ -46,7 +46,8 @@ class User < ApplicationRecord
   end
 
   def feed
-    Post.where("user_id = ?", id)
+    Post.all()
+    #Post.where("user_id = ?", id)
   end
 
   # checks auth state, returns boolean
