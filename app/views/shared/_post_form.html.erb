@@ -4,4 +4,7 @@
 		<%= f.text_area :content, placeholder: "Drop some gratitude..." %>
 	</div>
 	<%= f.submit "Post", class: "btn btn-primary" %>
+	<span class="image">
+		<%= f.file_field :image %>
+	</span>
 <% end %>
